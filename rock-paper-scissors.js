@@ -12,5 +12,14 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 function getHumanChoice() {
-    
+    let humanChoice = prompt('Enter your shape:', 'Shape');
+    if (humanChoice === 'Rock' || humanChoice === 'rock') {
+        return 'rock';
+    } else if (humanChoice === 'Paper' || humanChoice === 'paper') {
+        return 'paper'
+    } else {
+        return 'scissors';
+    }
 }
+
+console.log(getHumanChoice());
