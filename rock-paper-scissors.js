@@ -9,22 +9,34 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
 function getHumanChoice() {
-    let humanChoice = prompt('Enter your shape:', 'Shape');
-    if (humanChoice === 'Rock' || humanChoice === 'rock') {
+    let humanInput = prompt('Enter your shape:', 'Shape');
+    if (humanInput === 'Rock' || humanInput === 'rock') {
         return 'rock';
-    } else if (humanChoice === 'Paper' || humanChoice === 'paper') {
+    } else if (humanInput === 'Paper' || humanInput === 'paper') {
         return 'paper'
     } else {
         return 'scissors';
     }
 }
 
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
 
-let humanScore = 0;
+// let humanScore = 0;
 
-let computerScore = 0;
+// let computerScore = 0;
 
+function playRound(humanChoice, computerChoice) {
+    const convertedChoice1 = humanChoice.toLowerCase();
+    const convertedChoice2 = computerChoice.toLowerCase();
+    console.log('Human chose ' + convertedChoice1);
+    console.log('Computer chose ' + convertedChoice2);
+}   
+
+const humansMove = getHumanChoice();
+const computersMove = getComputerChoice();
+
+
+console.log(playRound(humansMove, computersMove));
