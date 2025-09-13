@@ -17,7 +17,7 @@ function getHumanChoice() {
         return 'rock';
     } else if (humanInput === 'Paper' || humanInput === 'paper') {
         return 'paper'
-    } else {
+    } else if (humanInput === 'Scissors' || humanInput === 'scissors'){
         return 'scissors';
     }
 }
