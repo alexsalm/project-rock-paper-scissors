@@ -22,21 +22,57 @@ function getHumanChoice() {
     }
 }
 
-// console.log(getHumanChoice());
-
-// let humanScore = 0;
-
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     const convertedChoice1 = humanChoice.toLowerCase();
     const convertedChoice2 = computerChoice.toLowerCase();
-    console.log('Human chose ' + convertedChoice1);
-    console.log('Computer chose ' + convertedChoice2);
+    if (convertedChoice1 == 'rock' && convertedChoice2 == 'paper') {
+        console.log('You lose! Paper beats Rock');
+        computerScore++;
+    }
+    
+    else if (convertedChoice1 == 'rock' && convertedChoice2 == 'scizzors') {
+        console.log('You win! Rock beats scizzors!');
+        humanScore++;
+    } 
+    
+    else if (convertedChoice1 == 'rock' && convertedChoice2 == 'rock') {
+        console.log("It's a tie!");
+    } 
+    
+    else if (convertedChoice1 == 'paper' && convertedChoice2 == 'paper') {
+        console.log("It's a tie!");
+    } 
+    
+    else if (convertedChoice1 == 'paper' && convertedChoice2 == 'rock') {
+        console.log('You win! Paper beats Rock!');
+        humanScore++;
+    } 
+    
+    else if (convertedChoice1 == 'paper' && convertedChoice2 == 'scizzors') {
+        console.log('You lose! Scizzors beats Paper!');
+        computerScore++;
+    }
+
+    else if (convertedChoice1 == 'scizzors' && convertedChoice2 == 'rock') {
+        console.log('You lose! Rock beats Scizzors!');
+        computerScore++;
+    }
+
+    else if (convertedChoice1 == 'scizzors' && convertedChoice2 == 'paper') {
+        console.log('You win! Scizzors beats Paper!');
+        humanScore++;
+    }
+
+    else if (convertedChoice1 == 'scizzors' && convertedChoice2 == 'scizzors') {
+        console.log("It's a tie!");
+    }
 }   
 
-const humansMove = getHumanChoice();
-const computersMove = getComputerChoice();
+let humansMove = getHumanChoice();
+let computersMove = getComputerChoice();
 
 
 console.log(playRound(humansMove, computersMove));
