@@ -1,16 +1,20 @@
 function getComputerChoice() {
-    let choice = (Math.floor((Math.random() * 100) + 1));
-    if (choice < 33 && choice > 0) {
+    let choice = (Math.floor((Math.random() * 3)));
+
+    if (choice == 0) {
         return 'rock';
-    } else if (choice < 67 && choice > 33) {
+    } else if (choice == 1) {
         return 'paper';
-    } else if (choice < 100 && choice > 67) {
+    } else {
         return 'scissors';
     }
 }
 
-// console.log(getComputerChoice());
+let testCChoice = getComputerChoice();
+console.log(testCChoice);
 
+// console.log(getComputerChoice());
+/* 
 function getHumanChoice() {
     let humanInput = prompt('Enter your shape:', 'Shape');
     if (humanInput === 'Rock' || humanInput === 'rock') {
@@ -76,3 +80,4 @@ let computersMove = getComputerChoice();
 
 
 console.log(playRound(humansMove, computersMove));
+*/
