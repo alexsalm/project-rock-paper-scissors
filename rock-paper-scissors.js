@@ -78,24 +78,19 @@ function playRound(humanChoice, computerChoice) {
     console.log("Computer: " + computerScore + " Human: " + humanScore); 
 }
 
-let humanScore = 0;
-let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 console.log(playRound(humanSelection, computerSelection));
-/*
+
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     
     for (i = 0; i < 5; i++) {
-        const humansMove = getHumanChoice();
-        const computersMove = getComputerChoice();
-        playRound(humansMove, computersMove);
+        playRound(humanSelection, computerSelection);
     } 
     console.log("Human score: " + humanScore + " Computer Score: " + computerScore);
 }
 
 playGame();
-*/
