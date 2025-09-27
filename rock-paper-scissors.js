@@ -12,11 +12,11 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanInput = prompt('Enter your shape:');
-    if (humanInput === 'Rock' || humanInput === 'rock') {
+    if (humanInput.toLowerCase() === 'rock') {
         return 'rock';
-    } else if (humanInput === 'Paper' || humanInput === 'paper') {
+    } else if (humanInput.toLowerCase() === 'paper') {
         return 'paper';
-    } else if (humanInput === 'Scissors' || humanInput === 'scissors'){
+    } else if (humanInput.toLowerCase() === 'scissors'){
         return 'scissors';
     }
 }
