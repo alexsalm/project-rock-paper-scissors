@@ -78,40 +78,47 @@ function playRound(humanChoice, computerChoice) {
     }
 
     if (winner == 'human') {
-       return 'human'; 
+       return 1; 
     }
     else if (winner == 'computer') {
-        return 'computer';
+        return 2;
     }
     
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
 
 // playRound(humanSelection, computerSelection);
 
 
 function playGame() {
-    let totalHumanScore = 0;
-    let totalComputerScore = 0;
     let humanScore = 0;
     let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        let roundWinner = playRound(humanSelection, computerSelection);
     
-    let roundWinner = playRound(humanSelection, computerSelection);
+        if (roundWinner == 1) { 
+            humanScore++; 
+        }
+    
+        else if (roundWinner == 2) {
+            computerScore++;
+        }
 
-    if (roundWinner == 'human') {
-        humanScore++;
-        totalHumanScore = totalHumanScore + humanScore;
+        console.log("Human: " + humanScore + ", Computer: " + computerScore);
     }
-    if (roundWinner == 'computer') {
-        computerScore++;
-        totalComputerScore = totalComputerScore + computerScore;
+    
+    if (computerScore > humanScore) {
+        console.log("The computer wins the trophy!");
     }
-
-    console.log("Human: " + totalHumanScore + ", Computer: " + totalComputerScore);
-
-
+    
+    else if (computerScore < humanScore) {
+        console.log("The human wins the trophy!");
+    }
 }
 
 playGame();
