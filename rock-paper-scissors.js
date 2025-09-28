@@ -25,8 +25,8 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     let winner;
 
-    humanChoice = humanChoice.toLowerCase();
-    computerChoice = computerChoice.toLowerCase();
+    // humanChoice = humanChoice.toLowerCase();
+    // computerChoice = computerChoice.toLowerCase();
 
     console.log('Computer: ', computerChoice);
     console.log('Human: ', humanChoice);
