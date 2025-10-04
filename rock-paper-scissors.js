@@ -112,4 +112,6 @@ function playGame() {
     }
 }
 
+let gameIntro = prompt('Get ready to play \'Rock, Paper, Scissors\' with a computer! The game will last a total of 5 rounds. A winner will be chosen at the end of the fifth round. Press RETURN, ENTER, or hit the OK button to play.');
+
 playGame();
